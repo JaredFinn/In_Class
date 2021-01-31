@@ -1,4 +1,4 @@
-![Self Image](/Images/JaredFinn.png "Me")
+![Self Image](/Images/JaredFinn.png)
 
 ## **_Experience_**
 I first started studying computer science when I came to college. I have always been interested but never got into it. 
