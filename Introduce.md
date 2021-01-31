@@ -6,7 +6,7 @@ Computer Science is my major here at New Paltz, so I have been on track with tho
 Computer Science 1,2, and 3, Assembly Language, discrete math, Operating Systems, and software engineering, to name the most relevant. 
 A lot of the programs I have written are usually to test out skills and build a little bit each time, from little games to 
 generators for things in real life I might need. The largest project I have been a part of was in software engineering class, my group and I 
-created a video game software built in the Unreal Engine. Was a huge learning experience, and a big introduction into working in a group 
+created a video game software built in the Unreal Engine. It was a huge learning experience, and a big introduction into working in a group 
 towards one objective and bringing all our various skills together.
 
 ## **_Future_**
