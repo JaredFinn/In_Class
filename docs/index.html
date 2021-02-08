@@ -78,18 +78,19 @@
           </p>
         </header>
         <div class="card-content">
-          <div class="media">
+          <div class="media" v-for="x in inventory">
             <div class="media-left">
               <figure class="image is-48x48">
                 <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
               </figure>
             </div>
+
+            
+
             <div class="media-content">
-              <p class="title is-4">{{person1.name}}</p>
-              <p class="subtitle is-6">
-                {{person1.address.street}} <br>
-                {{person1.address.city}}
-              </p>
+              <button class="button is-small is-primary is-pulled-right">Add to Cart</button>
+              <p class="title is-4">{{x.name}}</p>
+              <p class="subtitle is-6">${{x.price}}</p>
             </div>
           </div>
       </div>
@@ -119,7 +120,11 @@
       var app = new Vue({
         el: '#controlThis',
         data: {
-          person1
+          inventory: [
+            { name: 'Shovel', price: 3.99 },
+            { name: 'Sled', price: 5.99 },
+            { name: 'Salt', price: 8.99 },
+        ],
         }
       })
 
