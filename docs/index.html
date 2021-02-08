@@ -69,37 +69,60 @@
         </div>
       </nav>
 
-    <section class="hero is-primary">
-        <div class="hero-body">
-          <div class="container">
-            <h1 class="title">
-                This will be my example
-            </h1>
-            <h2 class="subtitle">
-              Primary subtitle
-            </h2>
-          </div>
-        </div>
-      </section>
+    <div class="container" id="controlThis">
 
-    <div class="container">
-        <ul>
-            <li>Do not Kill</li>
-            <li>Do not Steal</li>
-            <li>No Adultery</li>
-            <li></li>
-            <li></li>
-        </ul>
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title">
+            Shop
+          </p>
+        </header>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-left">
+              <figure class="image is-48x48">
+                <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+              </figure>
+            </div>
+            <div class="media-content">
+              <p class="title is-4">{{person1.name}}</p>
+              <p class="subtitle is-6">
+                {{person1.address.street}} <br>
+                {{person1.address.city}}
+              </p>
+            </div>
+          </div>
+      </div>
+
     </div>
 
     <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
     <script>
-      $(function(){
+      const person1 = {
+        name: "Jared Finn",
+        age: 21,
+        address: {
+          street: "17 Fairview Ave",
+          city: "New Paltz",
+          state: "NY",
+          zip: "12561"
+        }
+      };
 
-        $(".navbar").css("backgroundColor" , "#ff6347")
+      console.log(`Hi ${+person1.age + 1} You are dope. I will send you something to ${person1.address.street}`);
 
+      console.log({person1});
+      //controlThis
+
+      var app = new Vue({
+        el: '#controlThis',
+        data: {
+          person1
+        }
       })
+
     </script>
   </body>
 </html>
