@@ -6,14 +6,14 @@
                 Insta-Gratitude
                 </a>
             
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" :class="{'is-active': isActive}" @click.prevent="isActive = !isActive">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 </a>
             </div>
             
-            <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-menu" :class="{'is-active': isActive}">
                 <div class="navbar-start">
 
                 <router-link to="/" class="navbar-item">Feed</router-link>
@@ -62,7 +62,10 @@
 
 <script>
 export default {
+    data: () => ({
+        isActive: false,
 
+    })
 }
 </script>
 

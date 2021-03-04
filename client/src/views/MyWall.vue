@@ -94,7 +94,7 @@
           </div>
           <div class="column is-one-quarter">
               <div class="content-item">
-                  <h3>Preview Post</h3>
+                  <h1>Preview Post</h1>
                   <ContentCard :post="newPost" />
               </div>  
           </div>
