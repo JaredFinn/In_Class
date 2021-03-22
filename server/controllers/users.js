@@ -14,23 +14,15 @@ const app = express.Router();
         } )
         .get('/:user_id', (req, res) => res.send(model.Get(req.params.user_id) ))
         .post('/', (req, res) => {
-            res.send( model.Add({
-                firstName: req.body.firstName,
-                lastName: req.body.lastName,
-                handle: req.body.handle,
-                pic: req.body.pic,
-            }));
+            res.send( model.Add(req.body));
             console.log(req.headers);
             console.log(req.body)
         })
+        .post('/login', (req, res) => {
+            res.send(model.Login(req.body.handle, req.body.password))
+        })
         .patch('/', (req, res) => res.send(model.Update(
-            req.params.user_id,
-            {
-                firstName: req.body.firstName,
-                lastName: req.body.lastName,
-                handle: req.body.handle,
-                pic: req.body.pic,
-        })))
+            req.params.user_id, req.body)))
         .delete('/:user_id', (req, res) => res.send(model.Delete(req.params.user_id)))
 
 
