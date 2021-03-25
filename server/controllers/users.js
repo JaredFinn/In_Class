@@ -15,8 +15,11 @@ const app = express.Router();
         .get('/:user_id', (req, res) => res.send(model.Get(req.params.user_id) ))
         .post('/', (req, res) => {
             res.send( model.Add(req.body));
-            console.log(req.headers);
-            console.log(req.body)
+        })
+        .post('/register', (req, res, next) => {
+            model.Register(req.body)
+            .then(user=> res.send(user))
+            .catch(next);
         })
         .post('/login', (req, res) => {
             res.send(model.Login(req.body.handle, req.body.password))
