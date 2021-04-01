@@ -21,8 +21,10 @@ const app = express.Router();
             .then(user=> res.send(user))
             .catch(next);
         })
-        .post('/login', (req, res) => {
-            res.send(model.Login(req.body.handle, req.body.password))
+        .post('/login', (req, res, next) => {
+            model.Login(req.body.handle, req.body.password)
+            .then(user=> res.send(user))
+            .catch(next);
         })
         .patch('/', (req, res) => res.send(model.Update(
             req.params.user_id, req.body)))
