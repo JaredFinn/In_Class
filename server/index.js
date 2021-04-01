@@ -3,12 +3,14 @@
 
 const path = require('path');
 const express = require('express');
+const dotenv = require("dotenv");
+dotenv.config();
 
 const usersCtrl = require('./controllers/users');
 const postsCtrl = require('./controllers/posts');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000
 
 app
     .use(express.json())
