@@ -89,3 +89,13 @@ module.exports.Login = async (handle, password) => {
 
     return {user, token};
 }
+
+module.exports.FromJWT = async (token) => {
+    try{
+        const user = jwt.verify(token, JWT_SECRET);
+        return user;
+    } catch (error){
+        console.log(error);
+        return null;
+    }
+}
