@@ -8,6 +8,14 @@
 
 <script>
 // @ is an alias to /src
+import { api } from "../models/myFetch"
+
+(async () => {
+  const actualItem = await api("posts");
+  console.log({actualItem});
+})()
+
+
 
 export default {
   name: 'Home',
