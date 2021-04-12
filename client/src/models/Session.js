@@ -19,7 +19,7 @@ export async function Login(handle, password) {
     console.log(Session.user);
     toaster.open({
         type: "is-success",
-        message: `Welcome ${Session.user.user.firstName}`
+        message: `Welcome ${Session.user.firstName}`
     })
 }
 

@@ -30,7 +30,7 @@ export default {
     },
     methods: {
         login() {
-            this.router.push('Login');
+            this.$router.push('Login');
         },
         logout() {
             Logout();

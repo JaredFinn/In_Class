@@ -18,19 +18,18 @@ export function api(url, data){
               'Content-Type': 'application/json'
             },
             body: JSON.stringify(data) // body data type must match "Content-Type" header
-        })
-    }
-    else{
-        promise = fetch(API_ROOT + url)
+          });
+    }else{
+        promise = fetch(API_ROOT + url);
+
     }
     return promise
-        .then(x => {
-            if(x.ok) return x.json(); 
-            else return x.json().then(y => { throw y } ) 
+        .then(x=> {
+            if(x.ok) return x.json();
+            else return x.json().then(y=> { throw y; })
         })
-        .catch(err => {
+        .catch(err=>{
             console.error(err);
-            toastError(err.message || err)
+            toastError(err.msg || err);
         });
-}
-    
+    }

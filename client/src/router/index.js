@@ -5,7 +5,7 @@ import Documentation from '../views/Documentation'
 import MyWall from "@/views/MyWall"
 import MyFeed from "@/views/MyFeed"
 import Login from "@/views/Login"
-import Users from "@/views/Users";
+import Users from "@/views/Users"
 import Session from '../models/Session'
 
 Vue.use(VueRouter)
