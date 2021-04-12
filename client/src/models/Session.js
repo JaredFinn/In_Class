@@ -1,6 +1,8 @@
 /* JF
     Holds the user session. Is a singleton.
 */
+import { ToastProgrammatic as toaster } from "buefy";
+
 const Session = {
     user: null,
     message: [] // To be used later
@@ -14,4 +16,12 @@ export function Login() {
 
 export function Logout() {
     Session.user = null
+}
+
+export function toastError(msg){
+    toaster.open({
+        message: msg,
+        queue: false,
+        type: "is-danger"
+    })
 }
