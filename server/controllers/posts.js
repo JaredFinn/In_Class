@@ -17,6 +17,10 @@ const app = express.Router();
             }
 
         } )
+        .get('/feed', (req, res) => {
+
+                res.send(model.GetFeed(req.user.handle) );
+        } )
         .get('/:post_id', (req, res) => {
             if(+req.params.post_id){
                 res.send(model.Get(req.params.post_id) )
