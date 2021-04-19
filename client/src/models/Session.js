@@ -2,6 +2,7 @@
     Holds the user session. Is a singleton.
 */
 import { ToastProgrammatic as toaster } from "buefy";
+import router from "../router";
 import { api } from "./myFetch";
 
 const Session = {
@@ -20,7 +21,9 @@ export async function Login(handle, password) {
     toaster.open({
         type: "is-success",
         message: `Welcome ${Session.user.firstName}`
-    })
+    });
+
+    router.push(Session.nextRoute ?? '/feed')
 }
 
 export function Logout() {
