@@ -9,10 +9,13 @@
                 Log in
             </a>
         </div>
-        <div v-else>
-            Hello {{ Session.user.firstName}} {{ Session.user.lastName}} {{ Session.user.handle}}
+         <div v-else>
+            <img :src="Session.user.profile" />
+            <b> {{Session.user.firstName}} {{Session.user.lastName}} </b>
+            <br />
+            {{Session.user.handle}}
             (<a @click="logout">
-                logout
+                Log out
             </a>)
         </div>
 
