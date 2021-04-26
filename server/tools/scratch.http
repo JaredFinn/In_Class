@@ -9,7 +9,7 @@ Content-Type: application/json
     "firstName": "Joe",
     "lastName": "Biden",
     "handle": "@potus",
-    "password": "DrJill"
+    "password": "Me"
 }
 
 
@@ -29,7 +29,7 @@ Content-Type: application/json
 
 
 {
-    "handle": "@jewpaltz",
+    "handle": "@jaredfinn",
     "password": "Me"
 }
 
