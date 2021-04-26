@@ -31,8 +31,6 @@ app
     .use('/users', usersCtrl)
     .use('/posts', LoginRequired, postsCtrl)
 
-
-
     //All the way at the end of pipeline
     .get('*', (req, res) => {
       res.sendFile(path.join(__dirname, '../docs/index.html'));
