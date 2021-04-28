@@ -4,7 +4,8 @@
   "description": "This server package is for our application",
   "scripts": {
     "dev": "nodemon --watch server server/index.js",
-    "run": "node server/index.js"
+    "run": "node server/index.js",
+    "start": "node index.js"
   },
   "dependencies": {
     "axios": "^0.21.1",
