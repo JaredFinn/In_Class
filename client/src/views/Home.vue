@@ -2,6 +2,10 @@
   <div class="home">
     <h1 class="title is-1">Hi this is new code</h1>
     
+    <user-search/>
+
+    <br>
+
      <b-carousel :autoplay="false" indicator-custom :indicator-inside="false" :overlay="gallery" @click="switchGallery(true)">
         <b-carousel-item v-for="(item, i) in 20" :key="i">
             <a class="image ">
@@ -21,18 +25,19 @@
 
 <script>
 // @ is an alias to /src
+import Vue from "vue"
+import userSearch from "../components/userSearch.vue";
 
-
-
-
-export default {
+export default Vue.extend({
+  components: { userSearch },
   data: () => ({
-    gallery: false
+    gallery: false,
+    data: [   ],
+    name: '',
+    selected: null
+
   }),
   name: 'Home',
-  components: {
-    
-  },
   methods: {
         getImgUrl(value) {
             value += 50
@@ -46,8 +51,10 @@ export default {
                 return document.documentElement.classList.remove('is-clipped')
             }
         }
-  }
-}
+  },
+  
+  
+})
 </script>
 
 <style>
