@@ -32,9 +32,8 @@ const app = express.Router();
             .then(user=> res.send(user))
             .catch(next);
         })
-        .patch('/', LoginRequired, (req, res) => res.send(model.Update(
-            req.params.user_id, req.body)))
-        .delete('/:user_id', LoginRequired, (req, res) => res.send(model.Delete(req.params.user_id)))
+        .patch('/:user_id', LoginRequired, (req, res)=> res.send( model.Update( req.params.user_id, req.body ) ) )
+        .delete('/:user_id', LoginRequired, (req, res)=> res.send( model.Delete(req.params.user_id) ) )
 
 
 module.exports = app;

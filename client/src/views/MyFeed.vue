@@ -9,11 +9,13 @@
           <div class="column">
 
               <div class="content-item">
-                  <content-creation :newPost="newPost" @add="addPost"/>              </div>
+                  <content-creation :newPost="newPost" @add="addPost"/>   
+              </div>
 
               <div class="content-item" v-for="(post, i) in posts" :key="i">
                   <ContentCard :post="post" @delete="deletePost(i)"/>
-              </div>              
+              </div>      
+
           </div>
           <div class="column is-one-quarter">
               <div class="content-item">
@@ -28,8 +30,7 @@
 <script>
 import ContentCard from "../components/ContentCard"
 import ContentCreation from '../components/ContentCreation.vue';
-import FriendsShort from '../components/FriendsShort.vue';
-import Vue from"vue";
+import Vue from "vue";
 import { AddPost, DeletePost, GetMyFeed } from "../models/Posts"
 import Session from "../models/Session";
 
@@ -45,7 +46,6 @@ export default Vue.extend({
     },
     components: {
         ContentCard,
-        FriendsShort,
         ContentCreation
     },
     methods: {
